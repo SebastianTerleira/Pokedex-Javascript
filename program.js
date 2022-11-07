@@ -1,14 +1,17 @@
-const pokemonContainer = document.querySelector('.pokemon-container')
+const pokemonContainer = document.querySelector('.pokemon-container');
+const spinner = document.querySelector('#spinner');
 
 function fetchPokemon(id) {
 	fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
 	.then(res => res.json())
 	.then(data => {
 		createPokemon(data);
+		spinner.style.display = "none";
 	});
 }
 
 function fetchPokemons(number) {
+	spinner.style.display = "block";
 	for (let i = 1; i <= number; i++) {
 		fetchPokemon(i);
 	}
