@@ -45,7 +45,7 @@ h6 {
 }
 
 .img-container {
-  background-image: url("./blob.svg");
+  background-image: url("../img/blob.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
